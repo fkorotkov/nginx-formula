@@ -1,0 +1,7 @@
+docker_builder:
+  name: Tests
+  env:
+    matrix:
+      - INSTANCE: default-debian-9-2019-2-py3
+  bundle_install_script: bundle install
+  verify_script: bundle exec kitchen verify $INSTANCE
